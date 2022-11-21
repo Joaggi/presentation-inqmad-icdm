@@ -25,9 +25,8 @@
 		<div class="slides">
 			<section>
 				<img src="resources/unal.png" style="width: 220px; margin-right: 20%;" />
-				<img src="resources/LXAI-logo-black.png" style="width: 120px; margin-right: 30px;" />
-				<img src="resources/Logo_for_Conference_on_Neural_Information_Processing_Systems.svg.png" style="width: 200px;" />
-				<h2 style="margin-top: 30px;">Anomaly detection using density matrices and kernel density estimation (AD-DMKDE)</h2>
+				<img src="resources/icdm22_logo.jpg" style="width: 120px; margin-right: 30px;" />
+				<h2 style="margin-top: 30px;">InQMAD: Incremental Quantum Measurement Anomaly Detection</h2>
 				<h4 style="font-weight: 100; margin-top: 40px;">Joseph A. Gallego-Mejia / Oscar Bustos / Fabio González</h4>
 				<b style="font-weight: 80; font-size: 20px;">jagallegom@unal.edu.co / oabustosb@unal.edu.co / fagonzalezo@unal.edu.co</b>
 				<h6 style="font-weight: 100; font-size: 18px; margin-top: 20px;">
@@ -421,99 +420,6 @@
 				</div>
 			</section>
 
-
-
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-								</ul>
-							</div>
-					</div>
-				</section>
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-								</ul>
-						</div>
-					</div>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-									<li>Differentiable.</li>
-								</ul>
-						</div>
-					</div>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-									<li>Differentiable.</li>
-									<li>Two ways of training: optimization free and sgd.</li>
-								</ul>
-						</div>
-					</div>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-						<img src="resources/dmkde_model_shrink.svg" alt="Websocket" width="20%" style="float: right">
-						<div width="50%">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-									<li>Differentiable.</li>
-									<li>Two ways of training: optimization free and sgd.</li>
-									<li>Based on two main ideas:
-									<ul>
-										<li>Random Fourier features to approximate the Gaussian kernel.</li>
-										<li>Density Matrices to represent the PDF.</li>
-									</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-				<section class="title-slide has-dark-background present" data-visibility="uncounted" style="top: 312px; display: none;">
-					<h1>Random Fourier Features and Kernel Methods</h1>
-				</section>
-
 				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
 					<h1 data-auto-animate-target="">Kernel Methods</h1>
@@ -564,9 +470,21 @@
 					</div>
 				</section>
 
+
+				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+						InQMAD: Incremental Quantum Measurement Anomaly Detection
+					</h2>
+					<div class="text-image">
+						<img src="resources/inqmeasurement2.png" alt="Classification dmkde"></img>
+					</div>
+				</section>
+
+
 				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">Random Fourier Features</h1>
+					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
 					<div class="text-image">
 						<div>
 							<ul>
@@ -581,7 +499,7 @@
 
 				<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">Random Fourier Features</h1>
+					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
 					<div class="text-image">
 						<div>
 							<ul>
@@ -600,7 +518,7 @@
 
 			<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">Random Fourier Features</h1>
+					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
 					<div class="text-image">
 						<div>
 							<ul>
@@ -621,7 +539,7 @@
 				</section>
         <section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">Random Fourier Features</h1>
+					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
 					<div class="text-image">
             <img src="resources/gaussian_aff.png" alt="Websocket" width="30%" style="float: right">
 						<div width="50%">
@@ -645,9 +563,44 @@
 				</section>
 
 
-				<section class="title-slide has-dark-background present" data-visibility="uncounted" style="top: 312px; display: none;">
-					<h1>Density Matrices</h1>
+        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+                <li>\[\begin{equation}
+  \rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\bf{x_i})\phi^t_\text{aff}(\bf{x_i})
+\end{equation}
+\]
+
+<center>where $\sum_{i=1}^{t} q_i = 1$</center>
+
+							</ul>
+						</div>
+					</div>
 				</section>
+
+
+       <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+                <li>\[\begin{equation} 
+  \rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\bf{x_i})\phi^t_\text{aff}(\bf{x_i})
+\end{equation}
+\]
+
+<center>where $\sum_{i=1}^{t} q_i = 1$</center>
+
+								<li>An initial portion of the stream $\{\bf{x}_1, \cdots, \bf{x}_n\}$ is used to update the density matrix.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
 
         <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
@@ -741,177 +694,214 @@
 				</section>
 
 
-        <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+
+
+
+				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
 					<div class="text-image">
-						<div>
-							<ul>
-                <li>Categorical distributions: <b style="color:red">Obvious</b>, but innefficient, not
-									very useful.</li>
-							</ul>
+							<div>
+								<ul>
+									<li>An efficient approximate version of KDE.</li>
+								</ul>
+							</div>
+					</div>
+				</section>
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>An efficient approximate version of KDE.</li>
+									<li>Non-memory based.</li>
+								</ul>
 						</div>
 					</div>
 				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>An efficient approximate version of KDE.</li>
+									<li>Non-memory based.</li>
+									<li>Differentiable.</li>
+								</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>An efficient approximate version of KDE.</li>
+									<li>Non-memory based.</li>
+									<li>Differentiable.</li>
+									<li>Two ways of training: optimization free and sgd.</li>
+								</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+						<img src="resources/dmkde_model_shrink.svg" alt="Websocket" width="20%" style="float: right">
+						<div width="50%">
+							<div>
+								<ul>
+									<li>An efficient approximate version of KDE.</li>
+									<li>Non-memory based.</li>
+									<li>Differentiable.</li>
+									<li>Two ways of training: optimization free and sgd.</li>
+									<li>Based on two main ideas:
+									<ul>
+										<li>Random Fourier features to approximate the Gaussian kernel.</li>
+										<li>Density Matrices to represent the PDF.</li>
+									</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
 
 
 
         <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
+					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>Categorical distributions: <b style="color:red">Obvious</b>, but innefficient, not
-									very useful.</li>
+                <li>\[\begin{equation}  \rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\bf{x_i})\phi^t_\text{aff}(\bf{x_i})
+\end{equation}
+\]
 
-								<li>Arbitrary distributions on \(\mathbb{R}^n\): <br><br><b style="color:red">Not
-										obvious</b>, mixtures of non-parametric probability distributions.</li>
+<center>where $\sum_{i=1}^{t} q_i = 1$</center>
+
+								<li>An initial portion of the stream $\{\bf{x}_1, \cdots, \bf{x}_n\}$ is used to update the density matrix.</li>
+                <li>Only normal data points are used in this phase.</li>
 							</ul>
 						</div>
 					</div>
 				</section>
 
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+
+        <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
-						Anomaly detection using density matrices and kernel density estimation (AD-DMKDE)
-					</h2>
+					<h2 data-auto-animate-target="11">Third Phase: Quantum Measurement</h2>
 					<div class="text-image">
-						<img src="resources/Group 6.png" alt="Classification dmkde"></img>
+						<div>
+							<ul>
+                <li>\[\begin{equation}
+                  \hat{f}(\bf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\bf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\bf{x})
+                  \end{equation}
+\]
+
+<center>where $\rho$ is the density matrix defined in the last phase and $M_\sigma$ is a normalization constant.</center>
+
+							</ul>
+						</div>
 					</div>
 				</section>
 
 
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Training Stage</h2>
-						<ol>
-							<li>Generate \(\mathbb{w} = (w_1, \cdots, w_D) \) and \(\mathbb{b} = (b_1, \cdots, b_D) \)</li>
-						</ol>
-				</section>
+        <section data-auto-animate="running"  class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Fourth Phase: Anomaly Detection Classification</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+                <li>\[\begin{equation}
+                  \hat{y}(\bf{x}_{i}) = \left\{\begin{matrix}
+ \text{ `normal'} & \textit{if } \hat{f}(\bf{x}_{i}) \geq \tau\\ 
+ \text{ `anomaly'} & \textit{otherwise}
+\end{matrix}\right.
+                  \end{equation}
+\]
 
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Training Stage</h2>
-						<ol>
-							<li>Generate \(\mathbb{w} = (w_1, \cdots, w_D) \) and \(\mathbb{b} = (b_1, \cdots, b_D) \)</li>
-							<li>Optimization of \(\mathbb{w} \) and \(\mathbb{b} \) (AFF)</li>
-						</ol>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Training Stage</h2>
-						<ol>
-							<li>Generate \(\mathbb{w} = (w_1, \cdots, w_D) \) and \(\mathbb{b} = (b_1, \cdots, b_D) \)</li>
-							<li>Optimization of \(\mathbb{w} \) and \(\mathbb{b} \) (AFF)</li>
-							<li>Embed each training data point step</li>
-						</ol>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Training Stage</h2>
-						<ol>
-							<li>Generate \(\mathbb{w} = (w_1, \cdots, w_D) \) and \(\mathbb{b} = (b_1, \cdots, b_D) \)</li>
-							<li>Optimization of \(\mathbb{w} \) and \(\mathbb{b} \) (AFF)</li>
-							<li>Embed each training data point step</li>
-							<li>Normalization of the embeddings</li>
-						</ol>
-				</section>
-
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Training Stage</h2>
-					<img src="resources/trainingstage.png" alt="Websocket" width="30%" style="float: right">
-					<div style="width: 60%; margin-top: 10%;">
-						<ol>
-							<li>Generate \(\mathbb{w} = (w_1, \cdots, w_D) \) and \(\mathbb{b} = (b_1, \cdots, b_D) \)</li>
-							<li>Optimization of \(\mathbb{w} \) and \(\mathbb{b} \) (AFF)</li>
-							<li>Embed each training data point step</li>
-							<li>Normalization of the embeddings</li>
-              <li><b>Density Matrix building</b>:  by adding the outer products of all training embeddings</li>
-						</ol>
+							</ul>
+						</div>
 					</div>
 				</section>
 
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Validation Stage and Hyperparameter Tuning
 
-          </h2>
-						<ol>
-							<li>RFF embedding of the validation samples</li>
-							</li>
-						</ol>
-				</section>
+        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Fourth Phase: Anomaly Detection Classification</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+                <li>\[\begin{equation}
+                  \hat{y}(\bf{x}_{i}) = \left\{\begin{matrix}
+ \text{ `normal'} & \textit{if } \hat{f}(\bf{x}_{i}) \geq \tau\\ 
+ \text{ `anomaly'} & \textit{otherwise}
+\end{matrix}\right.
+                  \end{equation}
+\]
 
+The threshold $\tau$ is found using two different approaches.
+<li>Prior knowledge of the proportion of anomalies ($\beta$).</li>
 
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Validation Stage and Hyperparameter Tuning
-</h2>
-						<ol>
-							<li>RFF embedding of the validation samples</li>
-							<li>Density using an the Born rule </li>
-							</li>
-						</ol>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Validation Stage and Hyperparameter Tuning
-</h2>
-					<img src="resources/validationstage.png" alt="Websocket" width="33%" style="float: right">
-					<div style="width: 60%; margin-top: 10%;">
-						<ol>
-							<li>RFF embedding of the validation samples</li>
-							<li>Density using an the Born rule </li>
-							<li>Compute a threshold \(\theta\) as discriminator
-							</li>
-						</ol>
+<li>Use an optimization metric computed over $\{\hat{f}(\bf{x_1}), \cdots, \hat{f}(\bf{x_n})\}$, for instance using the best threshold with respect to AUC-ROC in initial memory..</li>
+							</ul>
+						</div>
 					</div>
 				</section>
 
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Prediction/Test Stage</h2>
-						<ol>
-							<li>RFF embedding of the test samples</li>
-						</ol>
+
+        <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Fifth Phase: Density Matrix Update</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+                <li>\[\begin{equation}
+  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\bf{x}_{t+1}})\phi^T_\text{aff}({\bf{x}_{t+1}})
+                  \end{equation}
+\]
+
+							</ul>
+						</div>
+					</div>
 				</section>
 
 
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Prediction/Test Stage</h2>
-						<ol>
-							<li>RFF embedding of the test samples</li>
-							<li>Density using an the Born rule </li>
-						</ol>
-				</section>
+        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Fifth Phase: Density Matrix Update</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+                <li>\[\begin{equation}
+  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\bf{x}_{t+1}})\phi^T_\text{aff}({\bf{x}_{t+1}})
+                  \end{equation}
+\]
 
+<b>Proposition 1:</b> The resulting matrix $\rho_{t+1}$  is a valid density matrix of the form 
+$\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with $q_1 =  (1-\alpha)^{t+1}$, $q_i = (1-\alpha)^{t-i+1} \cdot \alpha \text{ } \forall i \in \{1,\cdots, t\}$ and $\alpha \in [0,1]$.
 
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Prediction/Test Stage</h2>
-					<img src="resources/predictionstage.png" alt="Websocket" width="33%" style="float: right">
-					<div style="width: 60%; margin-top: 11%;">
-						<ol>
-							<li>RFF embedding of the test samples</li>
-							<li>Density using an the Born rule </li>
-              <li>Using the threshold \(\theta\), classify each test sample as <b>normal</b> if its density
-                lies above the threshold, or as <b>anomaly</b> if its density lies below the threshold
-							</li>
-						</ol>
+							</ul>
+						</div>
 					</div>
 				</section>
 
@@ -920,10 +910,20 @@
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
-						Anomaly detection using density matrices and kernel density estimation (AD-DMKDE)
+						Memory Based vs Exponential Decay
 					</h2>
 					<div class="text-image">
-						<img src="resources/Group 6.png" alt="Classification dmkde"></img>
+						<img src="resources/importance.png" alt="Classification dmkde" style="width:60%"></img>
+					</div>
+				</section>
+
+				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+						InQMAD: Incremental Quantum Measurement Anomaly Detection
+					</h2>
+					<div class="text-image">
+						<img src="resources/inqmeasurement2.png" alt="Classification dmkde"></img>
 					</div>
 				</section>
 
@@ -934,64 +934,26 @@
 					\[\tiny{
 						\begin{array}[c]{l|c|c|c}
 						\hline
-						Dataset & Instances & Dimensions & Outlier Rate \\ 
-						\hline
-						
-						Arrhythmia & 452 & 274 & 0,146 \\
-						Cardio & 2060 & 22 & 0,2 \\
-						SpamBase & 3485 & 58 & 0,2 \\
-						Thyroid & 3772 & 36 & 0,0247 \\
-						KDDCUP & 10000 & 118 & 0,1934 \\
-						Glass & 214 & 9 & 0,042 \\
-						Lympho & 148 & 18 & 0,04 \\
-						Ionosphere & 351 & 33 & 0,359 \\
-						Letter & 1600 & 32 & 0,0625 \\
-						MNIST & 7603 & 100 & 0,092 \\
-						Musk & 3062 & 166 & 0,0317 \\
-						OptDigits & 5216 & 64 & 0,0288 \\
-						PenDigits & 6870 & 16 & 0,0227 \\
-						Pima & 768 & 8 & 0,349 \\
-						Satellite & 6435 & 36 & 0,3164 \\
-						SatImage & 5803 & 36 & 0,0122 \\
-						Shuttle & 10000 & 9 & 0,0715 \\
-						Vertebral & 240 & 6 & 0,125 \\
-						Vowels & 1456 & 12 & 0,03434 \\
-						WBC & 378 & 30 & 0,0556 \\  
+            Dataset & Records & Dimensions \\ 
+            \hline
+
+            Cardio & 1831 & 21 \\
+            Ionosphere & 351 & 33 \\
+            Mammography & 11183 & 6 \\
+            Pima & 768 & 8 \\
+            Satellite & 6435 & 36 \\
+            Satimage & 5803 & 36 \\
+            Synthetic & 10000 & 1 \\
+            \hline
+            KDD99 & 494021 & 121 \\
+            NSL & 125973 & 126  \\
+            Cover & 286048 & 10 \\
+            DoS & 1048575 & 95\\
+            UNSW & 2540044 & 122  \\
+             
 						\hline
 						\end{array}
 					}
-					\]
-				</section>
-
-				<section data-visibility="hidden" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-					<h2 data-auto-animate-target="11">Results</h2>
-					\[\tiny{
-					\begin{array}[c]{l||c|c|c|c|c|c|c|c|c|c|c||c}
-					\hline
-					Data Set    & OCSVM & iForest & Cov. & LOF & KNN & SOS & COPOD & LODA   & VAE-B & DSVDD & LAKE   & AD-DMKDE \\
-					\hline
-
-					Arrhythmia & 0.813 & 0.821 & 0.818 & 0.804 & 0.861 & 0.773 & 0.844 & 0.798 & 0.856 & 0.864 & \underline{0.909} & \bf{0.911} \\
-					Cardio     & \underline{0.804} & 0.752 & 0.756 & 0.702 & 0.753 & 0.739 & 0.750 & 0.717 & 0.783 & 0.735 & 0.672 & \bf{0.831} \\
-					Glass      & 0.916 & 0.931 & 0.931 & 0.925 & 0.900 & 0.907 & 0.916 & 0.848 & 0.900 & 0.907 & \bf{1.000} & \underline{0.974} \\
-					Ionosphere & 0.765 & 0.710 & 0.876 & 0.830 & 0.817 & 0.784 & 0.736 & 0.510 & 0.714 & 0.674 & \bf{0.993} & \underline{0.959} \\
-					Letter     & 0.893 & 0.897 & 0.909 & \bf{0.930} & 0.910 & 0.911 & 0.895 & 0.899 & 0.897 & 0.897 & 0.838 & \underline{0.927} \\
-					Lympho     & 0.934 & \bf{1.000} & 0.934 & \bf{1.000} & \bf{1.000}  & 0.934 & 0.962 & 0.923 & \bf{1.000} & \bf{1.000}  & \bf{1.000} & \bf{1.000} \\
-					MNIST      & 0.881 & 0.881 & 0.841 & 0.886 & 0.909 & 0.864 & 0.868 & 0.866 & 0.895 & 0.880 & \bf{0.959} & \underline{0.911} \\
-					Musk       & 0.958 & 0.931 & \underline{0.997} & 0.958 & 0.991 & 0.951 & 0.964 & 0.954 & 0.984 & 0.992 & 0.639 & \bf{1.000} \\
-					OptDigits  & 0.952 & 0.952 & 0.952 & 0.949 & 0.952 & 0.953 & 0.949 & \underline{0.955} & 0.951 & 0.952 & 0.819 & \bf{0.981} \\
-					PenDigits  & 0.963 & \underline{0.967} & 0.966 & 0.961 & 0.965 & 0.963 & 0.966 & 0.966 & 0.966 & 0.963 & \bf{0.994} & \bf{0.994} \\
-					Pima       & 0.592 & 0.624 & 0.559 & 0.615 & 0.644 & 0.636 & 0.615 & 0.597 & 0.632 & 0.679 & \underline{0.740} & \bf{0.758} \\
-					Satellite  & 0.681 & 0.757 & 0.813 & 0.634 & 0.716 & 0.597 & 0.732 & 0.709 & 0.761 & 0.761 & \underline{0.841} & \bf{0.845} \\
-					SatImage   & 0.984 & \underline{0.998} & 0.991 & 0.979 & 0.998 & 0.980 & 0.994 & 0.997 & 0.996 & 0.996 & 0.946 & \bf{1.000} \\
-					SpamBase   & 0.702 & 0.794 & 0.714 & 0.702 & 0.719 & 0.719 & 0.799 & 0.699 & 0.741 & 0.738 & \bf{0.885} & \underline{0.816} \\
-					Thyroid    & 0.953 & 0.958 & \bf{0.986} & 0.949 & 0.953 & 0.949  & 0.953 & 0.958 & 0.958 & 0.961 & 0.803 & \underline{0.967} \\
-					Vertebral  & 0.750 & 0.778 & 0.817 & 0.796 & 0.810 & 0.817 & 0.817 & 0.817 & 0.817 & \underline{0.819} & 0.807 & \bf{0.904} \\
-					Vowels     & 0.950 & 0.942 & 0.941 & 0.951 & 0.969 & 0.954 & 0.943 & 0.929 & 0.952 & 0.943 & \bf{1.000} & \underline{0.979} \\
-					WBC        & 0.942 & 0.941 & 0.949 & 0.957 & 0.942 & 0.913 & \bf{0.970} & 0.947 & 0.957 & 0.956 & 0.897 & \underline{0.961} \\
-					\hline
-					\end{array}} 
 					\]
 				</section>
 
@@ -1033,54 +995,30 @@
 				</section>
 
 
+				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+						Statistical Analysis of Experimental Setup 
+					</h2>
+					<div class="text-image">
+						<img src="resources/incremental-chess.png" alt="Classification dmkde"></img>
+					</div>
+				</section>
+
+
+
+
 			<!-- CONCLUSIONS -->
 
-			<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-			aria-hidden="true">
-				<h2 data-auto-animate-target="11">Conclusions</h2>
-				<ul>
-					<li>AD-DMKDE show better performance than state-of-the-art algorithms over twenty anomaly detection data sets. </li>
-        </ul>
-			</section>
-
-
 			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 			aria-hidden="true">
 				<h2 data-auto-animate-target="11">Conclusions</h2>
 				<ul>
-					<li>AD-DMKDE show better performance than state-of-the-art algorithms over twenty anomaly detection data sets. </li>
-					<li>The performance of AD-DMKDE does not seem to be affected by the anomaly rate of the data sets or the size
-						of the data sets, but it seems to perform better for low dimensionality data sets. 
-					</li>
-				</ul>
-			</section>
-
-
-			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-			aria-hidden="true">
-				<h2 data-auto-animate-target="11">Conclusions</h2>
-				<ul>
-					<li>AD-DMKDE show better performance than state-of-the-art algorithms over twenty anomaly detection data sets. </li>
-					<li>The performance of AD-DMKDE does not seem to be affected by the anomaly rate of the data sets or the size
-						of the data sets, but it seems to perform better for low dimensionality data sets. 
-					</li>
-					<li>In contrast with KDE, AD-DMKDE does not have huge memory requirements.</li>
-				</ul>
-			</section>
-
-
-			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-			aria-hidden="true">
-				<h2 data-auto-animate-target="11">Conclusions</h2>
-				<ul>
-					<li>AD-DMKDE show better performance than state-of-the-art algorithms over twenty anomaly detection data sets. </li>
-					<li>The performance of AD-DMKDE does not seem to be affected by the anomaly rate of the data sets or the size
-						of the data sets, but it seems to perform better for low dimensionality data sets. 
-					</li>
-					<li>In contrast with KDE, AD-DMKDE does not have huge memory requirements.</li>
-					<li>As future work, we will continue to further develop the main concepts behind AD-DMKDE, building 
+					<li>InQMAD show better performance than state-of-the-art algorithms over twelve anomaly detection data sets. </li>
+					<li>It computes density estimation given a normality measure for each point. </li>
+					<li>As future work, we will continue to further develop the main concepts behind InQMAD, building 
 						algorithms based on the combination of Fourier features and density matrices with deeper neural networks, 
-						such as autoencoders and variational autoencoders.
+						such as autoencoders.
 					</li>
 				</ul>
 			</section>
