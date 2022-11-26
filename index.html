@@ -151,8 +151,8 @@
 
 				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 style="margin-bottom: -80px;" data-auto-animate-target="">Streaming Anomaly Detection Methods</h1>
-					<img src="resources/State-Art-Streaming.svg" width="80%"> </img>
+					<h1 style="margin-bottom:-90px; margin-top:30px;" data-auto-animate-target="">Streaming Anomaly Detection Methods</h1>
+					<img src="resources/State-Art-Streaming.svg" width="84%"> </img>
 
 
 				</section>
@@ -200,18 +200,6 @@
 						</div>
 					</div>
 				</section>
-			
-
-				<section data-auto-animate="" class="future" style="top: 99.5px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="">Kernel Density Estimation</h1>
-					<div class="text-image">
-							<ul>
-								<li>Non-parametric density estimation method.</li>
-							</ul>
-					</div>
-
-				</section>
 
 
 				<section data-auto-animate="" data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
@@ -222,6 +210,7 @@
 								<li>Non-parametric density estimation method.</li>
 								<li>Does not make any particular assumption about the underlying probability density
 									function.</li>
+								<li>Unbiased estimator of the pdf.</li>
 							</ul>
 					</div>
 
@@ -239,6 +228,8 @@
 								<li>Does not make any particular assumption about the underlying probability density
 									function.</li>
 								<li>Unbiased estimator of the pdf.</li>
+								<li>Once the pdf has been estimated, anomaly detection can be done by labeling as anomalies the data points
+									that lie in regions where the pdf is lower than a particular threshold.</li>
 							</ul>
 						</div>
 					</div>
@@ -319,150 +310,82 @@
 								M: number of testing points</span>
 						</div>
 					</div>
-				</section>
-
-			
+				</section>			
 
 
-				<section data-visibility="hidden" data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+				<section data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h1 data-auto-animate-target="11">Problem Statement</h1>
-					<h4>Challenges of density estimation methods</h4>
+					<h4>Challenges for streaming data analysis</h4>
 					<ul>
-						<li>Efficiency and scalability.</li>
-						<li>Simplicity.</li>
-						<li>Ability to produce a good estimation of the density.</li>
-						<li>Integrability with deep models</li>
-						<li>Good for anomaly detection?</li>
+						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
+						<li>Anomalies are few and are scattered in the data stream, making it difficult to find relationships between them.</li>
+						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (concept drift).
+							Models need to be constantly updated to take into account the new data patterns.</li>
+						<li>The complexity of the analysis algorithms must be very efficient in terms of both memory and time.</li>
 					</ul>
 				</section>
 
 
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+				<section data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Problem Statement</h1>
-					<table>
-						<thead>
-							<tr>
-								<th>Aspects</th>
-								<th>Kernel Density Estimation</th>
-								<th>Neural Density Estimation</th>
-								<th>Generative Adversarial Networks</th>
-								<th style="background-color: cornsilk;">Ideal Method</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Non Memory Based</td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td style="background-color: cornsilk;"><span style="color:green;">&#10003;</span></td>
-							</tr>
-							<tr>
-								<td>Simplicity and interpretability</td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td style="background-color: cornsilk;"><span style="color:green">&#10003;</span></td>
-							</tr>
-							<tr>
-								<td>Training Difficulty</td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td style="background-color: cornsilk;"><span style="color:green">&#10003;</span></td>
-							</tr>
-							<tr>
-								<td>Density Estimation</td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td style="background-color: cornsilk;"><span style="color:green">&#10003;</span></td>
-							</tr>
-							<tr>
-								<td>Differentiable</td>
-								<td><span style="color:red">&#10006;</span></td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td><span style="color:green">&#10003;</span></td>
-								<td style="background-color: cornsilk;"><span style="color:green">&#10003;</span></td>
-							</tr>
-
-							<tr>
-								<td>Good for anomaly detection</td>
-								<td><span style="color:green">&#10003;?</span></td>
-								<td><span style="color:green">&#10003;?</span></td>
-								<td><span style="color:green">&#10003;?</span></td>
-								<td style="background-color: cornsilk;"><span style="color:green">&#10003;?</span></td>
-							</tr>
-						</tbody>
-					</table>
+					<h1 data-auto-animate-target="11" style="margin-bottom: 100px;">Problem Statement</h1>
+					<p style="font-size:36px;"><b>How KDE can be adapted in such a way that it can perform <br/> efficient anomaly detection on streaming data?</b></p>
 				</section>
 
 
-			
-			<!-- PROPOSAL INTRO -->
-			<section data-visibility="hidden" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-				aria-hidden="true">
-				<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
-					Anomaly detection using density matrices and kernel density estimation (AD-DMKDE)
-				</h2>
-				<div class="text-image">
-					<img src="resources/Group 6.png" alt="Classification dmkde"></img>
-				</div>
-			</section>
 
-				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">Kernel Methods</h1>
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
 					<div class="text-image">
+							<div>
 								<ul>
-									<li>Feature space induced by a kernel function.</li>
+									<li>Our method is based on an earlier work called <b>Density Matrix Kernel Density Estimation</b>.</li>
+									<ul>
+										<li>An efficient approximate version of KDE.</li>
+										<li>Non-memory based.</li>
+										<li>Differentiable.</li>
+										<li>Two ways of training: optimization free and sgd.</li>
+									</ul>									
 								</ul>
+						</div>
 					</div>
 				</section>
 
 
-				<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">Kernel Methods</h1>
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
 					<div class="text-image">
+						<img src="resources/dmkde_model_shrink.svg" alt="Websocket" width="20%" style="float: right">
+						<div width="50%">
+							<div>
 								<ul>
-									<li>Feature space induced by a kernel function.</li>
-									<li>High or infinite dimensional embedded feature space.</li>
+									<li>Our method is based on an earlier work called <b>Density Matrix Kernel Density Estimation</b>.</li>
+									<ul>
+										<li>An efficient approximate version of KDE.</li>
+										<li>Non-memory based.</li>
+										<li>Differentiable.</li>
+										<li>Two ways of training: optimization free and sgd.</li>
+										<li>Based on two main ideas:
+										<ul>
+											<li>Random Fourier features to approximate the Gaussian kernel.</li>
+											<li>Density Matrices to represent the PDF.</li>
+										</ul>
+										</li>
+									</ul>
 								</ul>
-					</div>
-				</section>
-
-
-				<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="">Kernel Methods</h1>
-					<div class="text-image">
-						<div class="container">
-							<div class="left-col">
-								<ul>
-									<li>Feature space induced by a kernel function.</li>
-									<li>High or infinite dimensional embedded feature space.</li>
-									<li>Problem: efficiency \(O(N^2)\)</li>
-								</ul>
-							</div>
-							<div class="right-col">
-								\[\textbf{K}= \begin{bmatrix}k(\textbf{x}_1, \textbf{x}_1) & \cdots & k(\textbf{x}_1,
-								\textbf{x}_N)
-								\\ & \vdots
-								\\ \cdots& k(\textbf{x}_i, \textbf{x}_j) & \cdots
-								\\ & \vdots &
-								\\ k(\textbf{x}_N, \textbf{x}_1) & \cdots & k(\textbf{x}_N, \textbf{x}_N)
-
-								\end{bmatrix}\]
-
 							</div>
 						</div>
 					</div>
 				</section>
 
 
+			
+			<!-- PROPOSAL INTRO -->
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
@@ -496,8 +419,8 @@
 						<div>
 							<ul>
 								<li><b>Idea</b>: feature space approximation. </li>
-								<li>Given \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
-									<br> builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
+								<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
+									<br> the method builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
 									\mathbb{R}^D\)
 									<br> such that \[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y)
 									\rangle \]
@@ -508,84 +431,85 @@
 					</div>
 				</section>
 
-			<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
+				<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
 					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
 					<div class="text-image">
 						<div>
 							<ul>
 								<li><b>Idea</b>: feature space approximation. </li>
-								<li>Given \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
-									<br> builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
+								<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
+									<br> the method builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
 									\mathbb{R}^D\)
 									<br> such that \[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y)
 									\rangle \]
 
 								</li>
-								<li><b>Result:</b> learn models involving non-linear kernels using linear
-									methods</li>
+								<li>The embedding \( \phi_{\text{rff}} \) depends on two parameters, \(\textbf{w}\) and \(\it{b}\), that are built by 
+									sampling on random distributions.</li>
 
 							</ul>
 						</div>
 					</div>
 				</section>
-        <section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
+
+
+        		<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
 					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
 					<div class="text-image">
-            <img src="resources/gaussian_aff.png" alt="Websocket" width="30%" style="float: right">
-						<div width="50%">
 						
+						<ul>
+							<li><b>Idea</b>: feature space approximation. </li>
+							<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
+								<br> the method builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
+								\mathbb{R}^D\)
+								<br> such that \[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y)
+								\rangle \]
+
+							</li>
+							<li>The embedding \( \phi_{\text{rff}} \) depends on two parameters, \(\textbf{w}\) and \(\it{b}\), that are built by 
+								sampling on random distributions.</li>
+
+							<li>We applied <b>AFF (Adaptive Fourier Features)</b>, a process to further optimize \(\textbf{w}\) and \(\it{b}\) using neural networks. </li>
+						</ul>
+					</div>
+				</section>
+
+
+        		<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
+					<div class="text-image">
+						<div>
 							<ul>
-								<li><b>Idea</b>: feature space approximation. </li>
-								<li>Given \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
-									<br> builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
-									\mathbb{R}^D\)
-									<br> such that \[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y)
-									\rangle \]
+								<li>The density matrix that stores the probability model is calculated as:</li>
+                	\[\begin{equation}
+					\rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\textbf{x}_i)\phi^t_\text{aff}(\textbf{x}_i)
+					\end{equation}
+					\]
 
-								</li>
-								<li><b>Result:</b> learn models involving non-linear kernels using linear
-									methods</li>
+					<center>where $\sum_{i=1}^{t} q_i = 1$</center>
 
-								<li><b>AFF</b>: further optimization using neural networks. </li>
 							</ul>
 						</div>
 					</div>
 				</section>
 
 
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+       			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>\[\begin{equation}
-  \rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\bf{x_i})\phi^t_\text{aff}(\bf{x_i})
-\end{equation}
-\]
+								<li>The density matrix that stores the probability model is calculated as:</li>
+							\[\begin{equation} 
+								\rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\textbf{x}_i)\phi^t_\text{aff}(\textbf{x}_i)
+							\end{equation}
+							\]
 
-<center>where $\sum_{i=1}^{t} q_i = 1$</center>
-
-							</ul>
-						</div>
-					</div>
-				</section>
-
-
-       <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                <li>\[\begin{equation} 
-  \rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\bf{x_i})\phi^t_\text{aff}(\bf{x_i})
-\end{equation}
-\]
-
-<center>where $\sum_{i=1}^{t} q_i = 1$</center>
+						<center>where $\sum_{i=1}^{t} q_i = 1$</center><br/>
 
 								<li>An initial portion of the stream $\{\bf{x}_1, \cdots, \bf{x}_n\}$ is used to update the density matrix.</li>
 							</ul>
@@ -594,222 +518,68 @@
 				</section>
 
 
-        <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                <li>State of a quantum system (QS) \(\psi \in \mathcal{H}\) (vector in a Hilbert space).
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</section>
-
-
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                <li>State of a quantum system (QS) \(\psi \in \mathcal{H}\) (vector in a Hilbert space).
-								</li>
-								<li><b>Born rule</b>: probability that a measurement will produce a particular result.
-								
-						</div>
-					</div>
-				</section>
-
-
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                <li>State of a quantum system (QS) \(\psi \in \mathcal{H}\) (vector in a Hilbert space).
-								</li>
-								<li><b>Born rule</b>: probability that a measurement will produce a particular result.
-								
-                <li>A more general model of probability.</li>
-
-							</ul>
-						</div>
-					</div>
-				</section>
-
-
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                <li>State of a quantum system (QS) \(\psi \in \mathcal{H}\) (vector in a Hilbert space).
-								</li>
-								<li><b>Born rule</b>: probability that a measurement will produce a particular result.
-								
-                <li>A more general model of probability.</li>
-								<li>It combines linear algebra and probability</li>
-
-							</ul>
-						</div>
-					</div>
-				</section>
-
-
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 data-auto-animate-target="11">Density Matrices</h1>
-					<h2 data-auto-animate-target="11">Represent a probability function efficiently</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                <li>State of a quantum system (QS) \(\psi \in \mathcal{H}\) (vector in a Hilbert space).
-								</li>
-								<li><b>Born rule</b>: probability that a measurement will produce a particular result.
-								
-                <li>A more general model of probability.</li>
-								<li>It combines linear algebra and probability</li>
-								<li>Probability calculations with linear algebra</li>
-
-							</ul>
-						</div>
-					</div>
-				</section>
-
-
-
-
-
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-								</ul>
-							</div>
-					</div>
-				</section>
-
 				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-								</ul>
-						</div>
-					</div>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-									<li>Differentiable.</li>
-								</ul>
-						</div>
-					</div>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-									<li>Differentiable.</li>
-									<li>Two ways of training: optimization free and sgd.</li>
-								</ul>
-						</div>
-					</div>
-				</section>
-
-
-				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
-
-					<div class="text-image">
-						<img src="resources/dmkde_model_shrink.svg" alt="Websocket" width="20%" style="float: right">
-						<div width="50%">
-							<div>
-								<ul>
-									<li>An efficient approximate version of KDE.</li>
-									<li>Non-memory based.</li>
-									<li>Differentiable.</li>
-									<li>Two ways of training: optimization free and sgd.</li>
-									<li>Based on two main ideas:
-									<ul>
-										<li>Random Fourier features to approximate the Gaussian kernel.</li>
-										<li>Density Matrices to represent the PDF.</li>
-									</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-
-
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>\[\begin{equation}  \rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\bf{x_i})\phi^t_\text{aff}(\bf{x_i})
-\end{equation}
-\]
+								<li>The density matrix that stores the probability model is calculated as:</li>
+							\[\begin{equation} 
+								\rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\textbf{x}_i)\phi^t_\text{aff}(\textbf{x}_i)
+							\end{equation}
+							\]
 
-<center>where $\sum_{i=1}^{t} q_i = 1$</center>
+						<center>where $\sum_{i=1}^{t} q_i = 1$</center><br/>
 
 								<li>An initial portion of the stream $\{\bf{x}_1, \cdots, \bf{x}_n\}$ is used to update the density matrix.</li>
-                <li>Only normal data points are used in this phase.</li>
+								<li>In quantum mechanics, density matrices are a mechanism used to efficiently represent states of quantum systems (vectors in a 
+									Hilbert space). Density matrices combine linear algebra and probability, allowing to perform probability 
+									calculations by using linear algebra operations.</li>
 							</ul>
 						</div>
 					</div>
 				</section>
 
 
-        <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Second Phase: Density Matrix Initialization</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+								<li>The density matrix that stores the probability model is calculated as:</li>
+							\[\begin{equation} 
+								\rho_t = \frac{1}{n}\sum_{i=1}^N q_i \cdot \phi_\text{aff}(\textbf{x}_i)\phi^t_\text{aff}(\textbf{x}_i)
+							\end{equation}
+							\]
+
+						<center>where $\sum_{i=1}^{t} q_i = 1$</center><br/>
+
+								<li>An initial portion of the stream $\{\bf{x}_1, \cdots, \bf{x}_n\}$ is used to update the density matrix.</li>
+								<li>In quantum mechanics, density matrices are a mechanism used to efficiently represent states of quantum systems (vectors in a 
+									Hilbert space). Density matrices combine linear algebra and probability, allowing to perform probability 
+									calculations by using linear algebra operations.</li>
+								<li>Only normal data points are used in this phase.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
+
+        		<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11">Third Phase: Quantum Measurement</h2>
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>\[\begin{equation}
-                  \hat{f}(\bf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\bf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\bf{x})
-                  \end{equation}
-\]
+							\[\begin{equation}
+							\hat{f}(\textbf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\textbf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\textbf{x})
+							\end{equation}
+			\]
 
-<center>where $\rho$ is the density matrix defined in the last phase and $M_\sigma$ is a normalization constant.</center>
+			<center>where $\rho$ is the density matrix defined in the last phase and $M_\sigma$ is a normalization constant.</center>
 
 							</ul>
 						</div>
@@ -823,13 +593,13 @@
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>\[\begin{equation}
-                  \hat{y}(\bf{x}_{i}) = \left\{\begin{matrix}
- \text{ `normal'} & \textit{if } \hat{f}(\bf{x}_{i}) \geq \tau\\ 
- \text{ `anomaly'} & \textit{otherwise}
-\end{matrix}\right.
-                  \end{equation}
-\]
+							\[\begin{equation}
+							\hat{y}(\textbf{x}_{i}) = \left\{\begin{matrix}
+							\text{`normal'} & \textit{if } \: \hat{f}(\textbf{x}_{i}) \geq \tau\\ 
+							\text{`anomaly'} & \textit{otherwise}
+							\end{matrix}\right.
+											\end{equation}
+							\]
 
 							</ul>
 						</div>
@@ -842,20 +612,21 @@
 					<h2 data-auto-animate-target="11">Fourth Phase: Anomaly Detection Classification</h2>
 					<div class="text-image">
 						<div>
-							<ul>
-                <li>\[\begin{equation}
-                  \hat{y}(\bf{x}_{i}) = \left\{\begin{matrix}
- \text{ `normal'} & \textit{if } \hat{f}(\bf{x}_{i}) \geq \tau\\ 
- \text{ `anomaly'} & \textit{otherwise}
-\end{matrix}\right.
-                  \end{equation}
-\]
+						<ul>
+							\[\begin{equation}
+							\hat{y}(\bf{x}_{i}) = \left\{\begin{matrix}
+							\text{`normal'} & \textit{if } \: \hat{f}(\textbf{x}_{i}) \geq \tau\\  
+							\text{ `anomaly'} & \textit{otherwise}
+							\end{matrix}\right.
+											\end{equation}
+							\]
 
-The threshold $\tau$ is found using two different approaches.
-<li>Prior knowledge of the proportion of anomalies ($\beta$).</li>
-
-<li>Use an optimization metric computed over $\{\hat{f}(\bf{x_1}), \cdots, \hat{f}(\bf{x_n})\}$, for instance using the best threshold with respect to AUC-ROC in initial memory..</li>
-							</ul>
+							<li>The threshold $\tau$ is found using two different approaches.
+							<ul><li>Prior knowledge of the proportion of anomalies ($\beta$).</li>
+							<li>Use an optimization metric computed over $\{\hat{f}(\textbf{x}_1), \cdots, \hat{f}(\textbf{x}_n)\}$, 
+								for instance using the best threshold with respect to AUC-ROC in initial memory.</li>
+							</ul></li>
+						</ul>
 						</div>
 					</div>
 				</section>
@@ -867,8 +638,8 @@ The threshold $\tau$ is found using two different approaches.
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>\[\begin{equation}
-  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\bf{x}_{t+1}})\phi^T_\text{aff}({\bf{x}_{t+1}})
+                \[\begin{equation}
+  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\textbf{x}_{t+1}})\phi^T_\text{aff}({\textbf{x}_{t+1}})
                   \end{equation}
 \]
 
@@ -884,12 +655,12 @@ The threshold $\tau$ is found using two different approaches.
 					<div class="text-image">
 						<div>
 							<ul>
-                <li>\[\begin{equation}
-  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\bf{x}_{t+1}})\phi^T_\text{aff}({\bf{x}_{t+1}})
+                \[\begin{equation}
+  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\textbf{x}_{t+1}})\phi^T_\text{aff}({\textbf{x}_{t+1}})
                   \end{equation}
 \]
 
-<b>Proposition 1:</b> The resulting matrix $\rho_{t+1}$  is a valid density matrix of the form 
+<li><b>Proposition 1:</b> The resulting matrix $\rho_{t+1}$  is a valid density matrix of the form 
 $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with $q_1 =  (1-\alpha)^{t+1}$, $q_i = (1-\alpha)^{t-i+1} \cdot \alpha \text{ } \forall i \in \{1,\cdots, t\}$ and $\alpha \in [0,1]$.
 
 							</ul>
@@ -909,13 +680,21 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 					</div>
 				</section>
 
-				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
-						InQMAD: Incremental Quantum Measurement Anomaly Detection
-					</h2>
+					<h2 data-auto-animate-target="11">Experimental Setup</h2>
+
 					<div class="text-image">
-						<img src="resources/inqmeasurement2.png" alt="Classification dmkde"></img>
+							<div>
+								<ul>
+									<li>The proposed method and other twelve methods were implemented and tested over twelve streaming datasets.</li>
+									<li>We performed a parameter grid search over our method, focusing on the size of the memory, the learning rate of
+										the adaptive Fourier features process, the variance of the approximated Gaussian kernel and the probability of
+										inserting new samples into the memory. </li>
+									<li>The selected metric used to compare the performance of all the methods was the area under the ROC curve (AUC-ROC).</li>
+								</ul>
+						</div>
 					</div>
 				</section>
 
@@ -923,7 +702,7 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11">Experimental Setup - Datasets</h2>
-					\[\tiny{
+					\[\scriptsize{
 						\begin{array}[c]{l|c|c|c}
 						\hline
             Dataset & Records & Dimensions \\ 
