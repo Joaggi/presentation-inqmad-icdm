@@ -148,16 +148,6 @@
 						</div>
 					</div>
 				</section>				
-
-				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
-					aria-hidden="true">
-					<h1 style="margin-bottom:-90px; margin-top:30px;" data-auto-animate-target="">Streaming Anomaly Detection Methods</h1>
-					<img src="resources/State-Art-Streaming.svg" width="84%"> </img>
-
-
-				</section>
-
-
 				<section data-auto-animate="" class="future" style="top: 99.5px; display: none;" hidden=""
 				aria-hidden="true">
 					<h1>Density Estimation</h1>
@@ -201,6 +191,30 @@
 					</div>
 				</section>
 
+
+				<section data-auto-animate="" data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 data-auto-animate-target="">Kernel Density Estimation</h1>
+					<div class="text-image">
+							<ul>
+								<li>Non-parametric density estimation method.</li>
+							</ul>
+					</div>
+
+				</section>
+
+				<section data-auto-animate="" data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 data-auto-animate-target="">Kernel Density Estimation</h1>
+					<div class="text-image">
+							<ul>
+								<li>Non-parametric density estimation method.</li>
+								<li>Does not make any particular assumption about the underlying probability density
+									function.</li>
+							</ul>
+					</div>
+
+				</section>
 
 				<section data-auto-animate="" data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
@@ -319,6 +333,40 @@
 					<h4>Challenges for streaming data analysis</h4>
 					<ul>
 						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
+					</ul>
+				</section>
+
+
+				<section data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 data-auto-animate-target="11">Problem Statement</h1>
+					<h4>Challenges for streaming data analysis</h4>
+					<ul>
+						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
+						<li>Anomalies are few and are scattered in the data stream, making it difficult to find relationships between them.</li>
+					</ul>
+				</section>
+
+
+				<section data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 data-auto-animate-target="11">Problem Statement</h1>
+					<h4>Challenges for streaming data analysis</h4>
+					<ul>
+						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
+						<li>Anomalies are few and are scattered in the data stream, making it difficult to find relationships between them.</li>
+						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (concept drift).
+							Models need to be constantly updated to take into account the new data patterns.</li>
+					</ul>
+				</section>
+
+
+				<section data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 data-auto-animate-target="11">Problem Statement</h1>
+					<h4>Challenges for streaming data analysis</h4>
+					<ul>
+						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
 						<li>Anomalies are few and are scattered in the data stream, making it difficult to find relationships between them.</li>
 						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (concept drift).
 							Models need to be constantly updated to take into account the new data patterns.</li>
@@ -326,11 +374,87 @@
 					</ul>
 				</section>
 
+				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 style="margin-bottom:-90px; margin-top:30px;" data-auto-animate-target="">Streaming Anomaly Detection Methods</h1>
+					<img src="resources/state-of-the-art.png" width="90%"> </img>
+
+
+				</section>
+
+
+				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+						Anomaly Detection using Density Estimation
+					</h2>
+					<div class="text-image">
+						<img src="resources/incremental-an-density.png" alt="Classification dmkde"></img>
+					</div>
+				</section>
+
 
 				<section data-visibility="uncounted" data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h1 data-auto-animate-target="11" style="margin-bottom: 100px;">Problem Statement</h1>
 					<p style="font-size:36px;"><b>How KDE can be adapted in such a way that it can perform <br/> efficient anomaly detection on streaming data?</b></p>
+				</section>
+
+
+
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>Our method is based on an earlier work called <b>Density Matrix Kernel Density Estimation</b>.</li>
+									<ul>
+										<li>An efficient approximate version of KDE.</li>
+									</ul>									
+								</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>Our method is based on an earlier work called <b>Density Matrix Kernel Density Estimation</b>.</li>
+									<ul>
+										<li>An efficient approximate version of KDE.</li>
+										<li>Non-memory based.</li>
+									</ul>									
+								</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Density Matrix Kernel Density Estimation</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>Our method is based on an earlier work called <b>Density Matrix Kernel Density Estimation</b>.</li>
+									<ul>
+										<li>An efficient approximate version of KDE.</li>
+										<li>Non-memory based.</li>
+										<li>Differentiable.</li>
+									</ul>									
+								</ul>
+						</div>
+					</div>
 				</section>
 
 
@@ -670,6 +794,7 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 
 
 
+
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
 					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
@@ -689,6 +814,36 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 							<div>
 								<ul>
 									<li>The proposed method and other twelve methods were implemented and tested over twelve streaming datasets.</li>
+								</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Experimental Setup</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>The proposed method and other twelve methods were implemented and tested over twelve streaming datasets.</li>
+									<li>We performed a parameter grid search over our method, focusing on the size of the memory, the learning rate of
+										the adaptive Fourier features process, the variance of the approximated Gaussian kernel and the probability of
+										inserting new samples into the memory. </li>
+								</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Experimental Setup</h2>
+
+					<div class="text-image">
+							<div>
+								<ul>
+									<li>The proposed method and other twelve methods were implemented and tested over twelve streaming datasets.</li>
 									<li>We performed a parameter grid search over our method, focusing on the size of the memory, the learning rate of
 										the adaptive Fourier features process, the variance of the approximated Gaussian kernel and the probability of
 										inserting new samples into the memory. </li>
@@ -698,6 +853,8 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 					</div>
 				</section>
 
+
+	
 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
@@ -786,6 +943,25 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 				<h2 data-auto-animate-target="11">Conclusions</h2>
 				<ul>
 					<li>InQMAD show better performance than state-of-the-art algorithms over twelve anomaly detection data sets. </li>
+				</ul>
+			</section>
+
+
+			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+			aria-hidden="true">
+				<h2 data-auto-animate-target="11">Conclusions</h2>
+				<ul>
+					<li>InQMAD show better performance than state-of-the-art algorithms over twelve anomaly detection data sets. </li>
+					<li>It computes density estimation given a normality measure for each point. </li>
+				</ul>
+			</section>
+
+
+			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+			aria-hidden="true">
+				<h2 data-auto-animate-target="11">Conclusions</h2>
+				<ul>
+					<li>InQMAD show better performance than state-of-the-art algorithms over twelve anomaly detection data sets. </li>
 					<li>It computes density estimation given a normality measure for each point. </li>
 					<li>As future work, we will continue to further develop the main concepts behind InQMAD, building 
 						algorithms based on the combination of Fourier features and density matrices with deeper neural networks, 
@@ -793,6 +969,19 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 					</li>
 				</ul>
 			</section>
+
+
+			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+			aria-hidden="true">
+				<ul>
+          <center>
+          <h2>Thanks You!</h2><br>
+					jagallegom@unal.edu.co<br>
+          <a>https://github.com/Joaggi/Incremental-Anomaly-Detection-using-Quantum-Measurements</a>
+          </center>
+				</ul>
+			</section>
+
 
 
 			
