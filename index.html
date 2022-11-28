@@ -235,6 +235,23 @@
 					aria-hidden="true">
 					<h1 data-auto-animate-target="">Kernel Density Estimation</h1>
 					<div class="text-image">
+							<ul>
+								<li>Non-parametric density estimation method.</li>
+								<li>Does not make any particular assumption about the underlying probability density
+									function.</li>
+								<li>Unbiased estimator of the pdf.</li>
+								<li>Once the pdf has been estimated, anomaly detection can be done by labeling as anomalies the data points
+									that lie in regions where the pdf is lower than a particular threshold.</li>
+							</ul>
+					</div>
+
+				</section>
+
+
+				<section data-auto-animate="" data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
+					aria-hidden="true">
+					<h1 data-auto-animate-target="">Kernel Density Estimation</h1>
+					<div class="text-image">
 						<img src="resources/kde_kernel.svg" alt="Websocket" width="40%" style="float: right">
 						<div style="width: 60%;">
 							<ul>
@@ -355,7 +372,7 @@
 					<ul>
 						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
 						<li>Anomalies are few and are scattered in the data stream, making it difficult to find relationships between them.</li>
-						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (concept drift).
+						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (<em>concept drift</em>).
 							Models need to be constantly updated to take into account the new data patterns.</li>
 					</ul>
 				</section>
@@ -368,7 +385,7 @@
 					<ul>
 						<li>The data arrives continuously and in large quantities, so store and process all data samples becomes infeasible.</li>
 						<li>Anomalies are few and are scattered in the data stream, making it difficult to find relationships between them.</li>
-						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (concept drift).
+						<li>Patterns on data can change over time, and the definition of normality can be modified by new data (<em>concept drift</em>).
 							Models need to be constantly updated to take into account the new data patterns.</li>
 						<li>The complexity of the analysis algorithms must be very efficient in terms of both memory and time.</li>
 					</ul>
@@ -376,16 +393,17 @@
 
 				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 style="margin-bottom:-90px; margin-top:30px;" data-auto-animate-target="">Streaming Anomaly Detection Methods</h1>
-					<img src="resources/state-of-the-art.png" width="90%"> </img>
-
+					<h2 style="margin-bottom:-140px; margin-top:60px;" data-auto-animate-target="">Streaming Anomaly Detection Methods</h2>
+					<div class="text-image">
+						<img src="resources/state-of-the-art.png" width="90%"> </img>
+					</div>
 
 				</section>
 
 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: 20px;">
 						Anomaly Detection using Density Estimation
 					</h2>
 					<div class="text-image">
@@ -521,9 +539,24 @@
 				</section>
 
 
+				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+						InQMAD: Incremental Quantum Measurement Anomaly Detection
+					</h2>
+					<ul>
+						<li><b>First Phase:</b> Map the original data to a feature space by using Random Fourier Features</li>
+						<li><b>Second Phase:</b> Initialize the Density Matrix</li>
+						<li><b>Third Phase:</b> Estimate the density of new data points using the Density Matrix, and <br>
+						    use these estimations to classify the points as normal data or anomalies</li>
+						<li><b>Fourth Phase:</b> Update the Density Matrix with info from the new points</li>
+					</ul>
+				</section>
+
+
 				<section data-auto-animate class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
+					<h2 data-auto-animate-target="">First Phase: Data Mapping</h2>
 					<div class="text-image">
 						<div>
 							<ul>
@@ -538,7 +571,7 @@
 
 				<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
+					<h2 data-auto-animate-target="">First Phase: Data Mapping</h2>
 					<div class="text-image">
 						<div>
 							<ul>
@@ -557,17 +590,14 @@
 
 				<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
+					<h2 data-auto-animate-target="">First Phase: Data Mapping</h2>
 					<div class="text-image">
 						<div>
 							<ul>
 								<li><b>Idea</b>: feature space approximation. </li>
-								<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
-									<br> the method builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
-									\mathbb{R}^D\)
-									<br> such that \[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y)
-									\rangle \]
-
+								<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\) the method builds 
+									an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow \mathbb{R}^D\) such that 
+									\[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y) \rangle \]
 								</li>
 								<li>The embedding \( \phi_{\text{rff}} \) depends on two parameters, \(\textbf{w}\) and \(\it{b}\), that are built by 
 									sampling on random distributions.</li>
@@ -580,17 +610,14 @@
 
         		<section data-auto-animate data-visibility="uncounted" class="future" style="top: 99.5px; display: none;" hidden=""
 					aria-hidden="true">
-					<h1 data-auto-animate-target="">First Phase: Random Fourier Features</h1>
+					<h2 data-auto-animate-target="">First Phase: Data Mapping</h2>
 					<div class="text-image">
 						
 						<ul>
 							<li><b>Idea</b>: feature space approximation. </li>
-							<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\)
-								<br> the method builds an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow
-								\mathbb{R}^D\)
-								<br> such that \[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y)
-								\rangle \]
-
+							<li>Given a kernel \( k:\mathbb{R}^d \times \mathbb R^d \rightarrow \mathbb R\) the method builds 
+								an embedding \( \phi_{\text{rff}}: \mathbb R^d \rightarrow \mathbb{R}^D\) such that 
+								\[ k(x,y) \approx \langle \phi_{\text{rff}}(x), \phi_{\text{rff}}(y) \rangle \]
 							</li>
 							<li>The embedding \( \phi_{\text{rff}} \) depends on two parameters, \(\textbf{w}\) and \(\it{b}\), that are built by 
 								sampling on random distributions.</li>
@@ -694,16 +721,17 @@
 
         		<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Third Phase: Quantum Measurement</h2>
+					<h2 data-auto-animate-target="11">Third Phase: Density Estimation and Anomaly Detection</h2>
 					<div class="text-image">
 						<div>
 							<ul>
+							<li>Given a new data point \(\textbf{x}_{t+1}\), its density is estimated using the following equation:</li>
 							\[\begin{equation}
-							\hat{f}(\textbf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\textbf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\textbf{x})
+							\hat{f}(\textbf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\textbf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\textbf{x}_{t+1})
 							\end{equation}
-			\]
+							\]
 
-			<center>where $\rho$ is the density matrix defined in the last phase and $M_\sigma$ is a normalization constant.</center>
+							<center>where $\rho_t$ is the density matrix defined in the last phase and $M_\sigma$ is a normalization constant.</center>
 
 							</ul>
 						</div>
@@ -711,82 +739,108 @@
 				</section>
 
 
-        <section data-auto-animate="running"  class="future" style="top: 312px; display: none;" hidden=""
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Fourth Phase: Anomaly Detection Classification</h2>
+					<h2 data-auto-animate-target="11">Third Phase: Density Estimation and Anomaly Detection</h2>
 					<div class="text-image">
 						<div>
 							<ul>
+							<li>Given a new data point \(\textbf{x}_{t+1}\), its density is estimated using the following equation:</li>
+							\[\begin{equation}
+							\hat{f}(\textbf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\textbf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\textbf{x}_{t+1})
+							\end{equation}
+							\]
+
+							<li>The threshold $\tau$ that separates normal and anomalous points is found using two different approaches.
+								<ul><li>Prior knowledge of the proportion of anomalies ($\beta$).</li>
+								<li>Use an optimization metric computed over $\{\hat{f}(\textbf{x}_1), \cdots, \hat{f}(\textbf{x}_n)\}$, 
+									for instance using the best threshold with respect to AUC-ROC in initial memory.</li>
+								</ul></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Third Phase: Density Estimation and Anomaly Detection</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+							<li>Given a new data point \(\textbf{x}_{t+1}\), its density is estimated using the following equation:</li>
+							\[\begin{equation}
+							\hat{f}(\textbf{x}_{t+1}) = \frac{1}{M_\sigma} {\phi}_\text{aff}(\textbf{x}_{t+1})^T \rho_t \: {\phi}_\text{aff}(\textbf{x}_{t+1})
+							\end{equation}
+							\]
+
+							<li>The threshold $\tau$ that separates normal and anomalous points is found using two different approaches.
+								<ul><li>Prior knowledge of the proportion of anomalies ($\beta$).</li>
+								<li>Use an optimization metric computed over $\{\hat{f}(\textbf{x}_1), \cdots, \hat{f}(\textbf{x}_n)\}$, 
+									for instance using the best threshold with respect to AUC-ROC in initial memory.</li>
+								</ul></li>
+							
+							<li>The classification of the data point \(\textbf{x}_{t+1}\) will be given by:</li>
 							\[\begin{equation}
 							\hat{y}(\textbf{x}_{i}) = \left\{\begin{matrix}
-							\text{`normal'} & \textit{if } \: \hat{f}(\textbf{x}_{i}) \geq \tau\\ 
-							\text{`anomaly'} & \textit{otherwise}
+							\text{`normal`} & \textit{if } \: \hat{f}(\textbf{x}_{i}) \geq \tau\\ 
+							\text{`anomaly`} & \textit{otherwise}
 							\end{matrix}\right.
 											\end{equation}
 							\]
-
 							</ul>
 						</div>
 					</div>
 				</section>
 
 
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+        		<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Fourth Phase: Anomaly Detection Classification</h2>
+					<h2 data-auto-animate-target="11">Fourth Phase: Density Matrix Update</h2>
 					<div class="text-image">
 						<div>
-						<ul>
+							<ul>
+								<li>The density matrix can be updated when a new data point arrives. The sample \({\textbf{x}_{t+1}}\) is added to <br>
+								    the density matrix, weighing it with a tradeoff parameter \(\alpha\).</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+					aria-hidden="true">
+					<h2 data-auto-animate-target="11">Fourth Phase: Density Matrix Update</h2>
+					<div class="text-image">
+						<div>
+							<ul>
+								<li>The density matrix can be updated when a new data point arrives. The sample \({\textbf{x}_{t+1}}\) is added to <br>
+								    the density matrix, weighing it with a tradeoff parameter \(\alpha\).</li>
+								<li>The updated density matrix will be</li>
 							\[\begin{equation}
-							\hat{y}(\bf{x}_{i}) = \left\{\begin{matrix}
-							\text{`normal'} & \textit{if } \: \hat{f}(\textbf{x}_{i}) \geq \tau\\  
-							\text{ `anomaly'} & \textit{otherwise}
-							\end{matrix}\right.
+							\rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\textbf{x}_{t+1}})\phi^T_\text{aff}({\textbf{x}_{t+1}})
 											\end{equation}
 							\]
-
-							<li>The threshold $\tau$ is found using two different approaches.
-							<ul><li>Prior knowledge of the proportion of anomalies ($\beta$).</li>
-							<li>Use an optimization metric computed over $\{\hat{f}(\textbf{x}_1), \cdots, \hat{f}(\textbf{x}_n)\}$, 
-								for instance using the best threshold with respect to AUC-ROC in initial memory.</li>
-							</ul></li>
-						</ul>
-						</div>
-					</div>
-				</section>
-
-
-        <section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Fifth Phase: Density Matrix Update</h2>
-					<div class="text-image">
-						<div>
-							<ul>
-                \[\begin{equation}
-  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\textbf{x}_{t+1}})\phi^T_\text{aff}({\textbf{x}_{t+1}})
-                  \end{equation}
-\]
-
 							</ul>
 						</div>
 					</div>
 				</section>
 
 
-        <section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
-					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Fifth Phase: Density Matrix Update</h2>
+				<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+				aria-hidden="true">
+					<h2 data-auto-animate-target="11">Fourth Phase: Density Matrix Update</h2>
 					<div class="text-image">
 						<div>
 							<ul>
-                \[\begin{equation}
-  \rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\textbf{x}_{t+1}})\phi^T_\text{aff}({\textbf{x}_{t+1}})
-                  \end{equation}
-\]
-
-<li><b>Proposition 1:</b> The resulting matrix $\rho_{t+1}$  is a valid density matrix of the form 
-$\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with $q_1 =  (1-\alpha)^{t+1}$, $q_i = (1-\alpha)^{t-i+1} \cdot \alpha \text{ } \forall i \in \{1,\cdots, t\}$ and $\alpha \in [0,1]$.
-
+								<li>The density matrix can be updated when a new data point arrives. The sample \({\textbf{x}_{t+1}}\) is added to <br>
+									the density matrix, weighing it with a tradeoff parameter \(\alpha\).</li>
+								<li>The updated density matrix will be</li>
+							\[\begin{equation}
+							\rho_{t+1} =  (1-\alpha) \cdot \rho_{t} + \alpha \cdot \phi_\text{aff}({\textbf{x}_{t+1}})\phi^T_\text{aff}({\textbf{x}_{t+1}})
+											\end{equation}
+							\]
+								<li>The updated density matrix is then used to estimate the density of the next sample in the data stream.</li>
 							</ul>
 						</div>
 					</div>
@@ -858,7 +912,7 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11">Experimental Setup - Datasets</h2>
+					<h2 data-auto-animate-target="11" style="margin-bottom:25px;">Experimental Setup - Datasets</h2>
 					\[\scriptsize{
 						\begin{array}[c]{l|c|c|c}
 						\hline
@@ -888,7 +942,7 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
               
-					<h2 data-auto-animate-target="11">Results</h2>
+					<h2 data-auto-animate-target="11" style="margin-top:30px; margin-bottom:-15px;">Results</h2>
             <style>
               .p_iframe iframe {
                 width:90%;
@@ -907,7 +961,7 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
               
-					<h2 data-auto-animate-target="11">Results</h2>
+					<h2 data-auto-animate-target="11" style="margin-top:20px;  margin-bottom:-15px;">Results</h2>
             <style>
               .p_iframe iframe {
                 width:90%;
@@ -925,11 +979,15 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 
 				<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 					aria-hidden="true">
-					<h2 data-auto-animate-target="11" style="margin-top: 20px; margin-bottom: -15px;">
+					<h2 data-auto-animate-target="11" style="margin-top: 20px;">
 						Statistical Analysis of Experimental Setup 
 					</h2>
+					<h4>Friedman-Nemenyi Test</h4>
+					<ul>
+						<li>Black squares correspond to pairs of algorithms that differ significantly between them.</li>
+					</ul>
 					<div class="text-image">
-						<img src="resources/incremental-chess.png" alt="Classification dmkde"></img>
+						<img src="resources/incremental-chess.png" alt="Classification dmkde" width="32%"></img>
 					</div>
 				</section>
 
@@ -938,7 +996,7 @@ $\rho_{t+1} = \sum_{i=1}^{t+1} q_i \phi({\bf{x}_{i}})\phi^T({\bf{x}_{i}})$ with 
 
 			<!-- CONCLUSIONS -->
 
-			<section data-auto-animate="running" data-visibility="uncounted" class="future" style="top: 312px; display: none;" hidden=""
+			<section data-auto-animate="running" class="future" style="top: 312px; display: none;" hidden=""
 			aria-hidden="true">
 				<h2 data-auto-animate-target="11">Conclusions</h2>
 				<ul>
